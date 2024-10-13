@@ -1,15 +1,18 @@
 #include<iostream>
-#include<vector>
+#include<bits/stdc++.h>
 
 using namespace std;
 
-// hex to dec
-void h2d(n) {
-	
-}
+
+// // hexdec to dec
+void h2d(string ens) { cout << stoi(ens, 0, 16); }
+//	                             ^ 	     ^   ^
+//       change strings to num __|       |   |__ base, e.g. hexdec
+//	        					         |
+//                                null pointer
 
 
-// dec to hexdec
+// dec to hexdec ( almost the same algorithm as dec to bin )
 void d2h(int n) {
 
 	int i=1;
@@ -19,7 +22,7 @@ void d2h(int n) {
 		
 		henum[i]=n%16;
 		n=n/16;
-		++i;
+		i++;
 	}
 	
 	cout << "so hexdec la: ";
@@ -27,19 +30,19 @@ void d2h(int n) {
 	for(int j=i-1;j>0;j--){
 		
 		switch (henum[j]) {
-			case 11:
+			case 10:
 				cout << "A";
 				break;
-			case 12:
+			case 11:
 				cout << "B";
 				break;
-			case 13:
+			case 12:
 				cout << "C";
 				break;
-			case 14:
+			case 13:
 				cout << "E";
 				break;
-			case 15:
+			case 14:
 				cout << "F";
 				break;
 			default:
@@ -54,7 +57,7 @@ void d2b(int n) {
 		 //			      v
 	int i=0; // vi tri ban dau, vd: 1231345
 		 //		              ^
-	int binum[64]; // luu tru bit
+	int binum[64];
 	
 	
 	// looping part
@@ -78,9 +81,14 @@ void d2b(int n) {
 // driver
 int main(){
 	int sel; // lmao incel, pun intended
-	
+	string sel2; 
+
 	cout << "nhap so thap phan: "; cin >> sel;
+	cout << "nhap chuoi thap luc phan: "; cin >> sel2;
 	
+	cout << endl;
+
 	d2b(sel); cout << endl;
 	d2h(sel); cout << endl;
+	cout << "chuoi dec la: "; h2d(sel2);
 }
