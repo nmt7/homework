@@ -4,13 +4,30 @@
 using namespace std;
 
 
-// // hexdec to dec
+// hexdec to dec
 void h2d(string ens) { cout << stoi(ens, 0, 16); }
 //	                             ^ 	     ^   ^
 //       change strings to num __|       |   |__ base, e.g. hexdec
 //	        					         |
 //                                null pointer
 
+// dec to oct
+void d2o(int n){
+	int i=1;
+	int ocnum[64];
+
+	while (n>0){
+		ocnum[i]=n%8;
+		n=n/8;
+		i++;
+	}
+
+	cout << "so dec sang oct: ";
+
+	for (int j=i-1; j>0; j--){
+		cout << ocnum[j];
+	}
+}
 
 // dec to hexdec ( almost the same algorithm as dec to bin )
 void d2h(int n) {
@@ -25,7 +42,7 @@ void d2h(int n) {
 		i++;
 	}
 	
-	cout << "so hexdec la: ";
+	cout << "so dec sang hexdec la: ";
 	
 	for(int j=i-1;j>0;j--){
 		
@@ -55,8 +72,8 @@ void d2h(int n) {
 // dec to binary
 void d2b(int n) {
 		 //			      v
-	int i=0; // vi tri ban dau, vd: 1231345
-		 //		              ^
+	int i=1; // vi tri ban dau, vd: 01231345
+		 //		                    ^
 	int binum[64];
 	
 	
@@ -69,7 +86,7 @@ void d2b(int n) {
 	}
 	
 	// in so
-	cout << "so bit la: ";
+	cout << "so dec sang bin la: ";
 	
 	// in sap xep dung thu tu
 	for (int j=i-1; j>0; j--) {
@@ -90,5 +107,6 @@ int main(){
 
 	d2b(sel); cout << endl;
 	d2h(sel); cout << endl;
-	cout << "chuoi dec la: "; h2d(sel2);
+	d2o(sel); cout << endl;
+	cout << "chuoi hexdec sang dec la: "; h2d(sel2);
 }
