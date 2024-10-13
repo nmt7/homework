@@ -3,13 +3,24 @@
 
 using namespace std;
 
+// int i=1 quet so dau tien
 
-// hexdec to dec
+// void func(string NumOrHex) { cout << stoi(ens, 0, numnum); }
+// This function can be used to change from hex, oct, bin to decimal
+// by replacing "numnum" with 16, 8 or 2
+// ~tsun
+
+
+// hex to oct
+void h2o(string n) {
+
+}
+
+// hex to dec
 void h2d(string ens) { cout << stoi(ens, 0, 16); }
-//	                             ^ 	     ^   ^
-//       change strings to num __|       |   |__ base, e.g. hexdec
-//	        					         |
-//                                null pointer
+// stoi: string to num
+// 0: null pointer
+// 16: base num
 
 // dec to oct
 void d2o(int n){
@@ -29,7 +40,7 @@ void d2o(int n){
 	}
 }
 
-// dec to hexdec ( almost the same algorithm as dec to bin )
+// dec to hex ( almost the same algorithm as dec to bin )
 void d2h(int n) {
 
 	int i=1;
@@ -42,7 +53,7 @@ void d2h(int n) {
 		i++;
 	}
 	
-	cout << "so dec sang hexdec la: ";
+	cout << "so dec sang hex la: ";
 	
 	for(int j=i-1;j>0;j--){
 		
@@ -108,5 +119,5 @@ int main(){
 	d2b(sel); cout << endl;
 	d2h(sel); cout << endl;
 	d2o(sel); cout << endl;
-	cout << "chuoi hexdec sang dec la: "; h2d(sel2);
+	cout << "chuoi hex sang dec la: "; h2d(sel2);
 }
