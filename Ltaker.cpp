@@ -19,6 +19,13 @@ void LSqr(int sok){
 
     // one quater of the big square/small square
     for (int x=0; x<z;x++){
+
+        // uncomment the code below to make the square go to the right.
+
+        // for (int t=0; t<z;t++){
+        //     cout << " ";
+        // }
+
         for (int y=0; y<z;y++){
             cout << "L";
         }
