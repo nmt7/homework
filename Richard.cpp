@@ -19,33 +19,33 @@ void LSqr(int sok){
     // last half of the square/rectangle
     for (int x=0; x<z; x++){
         for (int t=0; t<z;t++){
-            cout << " ";
+            cout << "    ";
         }
 
         for (int y=0; y<z; y++){
-            cout << "L";
+            cout << "d1ck";
         }
         cout << endl;
     }
 
     for (int x=0; x<z; x++){
         for (int t=0; t<z;t++){
-            cout << " ";
+            cout << "    ";
         }
 
         for (int y=0; y<z; y++){
-            cout << "L";
+            cout << "d1ck";
         }
         cout << endl;
     }
 
     for (int x=0; x<z; x++){
         for (int t=0; t<z;t++){
-            cout << " ";
+            cout << "    ";
         }
 
         for (int y=0; y<z; y++){
-            cout << "L";
+            cout << "d1ck";
         }
         cout << endl;
     }
@@ -56,15 +56,15 @@ void LSqr(int sok){
         // uncomment the code below to make the square go to the right.
         
         for (int y=0; y<z; y++){
-            cout << "L";
+            cout << "d1ck";
         }
 
         for (int t=0; t<z;t++){
-            cout << " ";
+            cout << "    ";
         }
 
         for (int y=0; y<z; y++){
-            cout << "L";
+            cout << "d1ck";
         }
         cout << endl;
     }
