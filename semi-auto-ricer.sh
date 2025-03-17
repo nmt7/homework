@@ -8,6 +8,20 @@ semiautoricer(){
 sudo apt update && sudo apt full-upgrade && sudo apt dist-upgrade && sudo apt autoremove && sudo apt autoclean
 
 
+# upgd
+mkupgdscr(){
+	echo "Making 'upgd' script."
+	cat > "/home/kali/.local/bin/upgd" << Sen
+#!/bin/bash
+sudo apt update && sudo apt full-upgrade -y
+sudo apt dist-upgrade
+sudo apt autoremove && sudo apt autoclean
+Sen
+	chmod +x "/home/kali/.local/bin/upgd"
+}
+mkupgdscr
+
+
 # xfce4 theming files
 engrampa -h "/home/$USER/Archive/xfce4-theming-files/themes-and-icons-main.zip"
 
